@@ -7,3 +7,6 @@
 
 JS安全域名接口   www.bfpifa.cn
 
+扫描一下二维码，关注账号，随意输入内容进入测试页面进行测试
+
+![image](https://github.com/mxshuai/wechart-nodejs/blob/master/public/images/erweima.jpg)
