@@ -11,9 +11,11 @@ var ajax = require('./routes/ajax');
 var http = require('http');
 var path = require('path');
 var wechat = require('wechat');
+var favicons = require('connect-favicons');
 
 var app = express();
 
+app.use(favicons(__dirname + '/public/img/icons'));
 // all environments
 app.set('port', process.env.PORT || 18080);
 app.set('views', path.join(__dirname, 'views'));

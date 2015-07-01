@@ -4,7 +4,7 @@
  */
 var http = require('http');
 
-
+var async = require('async');
 var https = require('https');
 var qs = require('querystring');
 var path = require("path");
@@ -88,12 +88,12 @@ exports.ticket = function(){
 		
 		
     });
-	 
+	req.on('error', function (e) {
+    console.log('problem with request: ' + e.message);
+});
+req.end(); 
 		
-	}
+	};
 	
-
-
- 	
 
 };

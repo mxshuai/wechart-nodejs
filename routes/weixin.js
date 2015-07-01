@@ -7,7 +7,7 @@ var qs = require('querystring');
 var fs = require('fs');
 
 
-exports.weixin = function(req, res0){
+exports.weixin = function(req, res){
 
 	var url = require("url"); 
 		console.log(req.url);
@@ -17,9 +17,9 @@ exports.weixin = function(req, res0){
 //var url=encodeURIComponent(req.protocol+'://'+req.host+':80'+req.url);
 var url=params.url;
 
-var intervalId= setInterval(asd(),1000);
+var intervalId= setInterval(yibutimer,1000);
 
-function asd(){
+function yibutimer(){
 console.log("......");	
 	var jsapi_ticket=ticket.ticket();
 	console.log(jsapi_ticket);	
@@ -29,7 +29,7 @@ console.log('jsapi_ticket:   '+jsapi_ticket);
 	signjson=sign(jsapi_ticket, url);
 	console.log("signjson:   "+signjson);
 		console.log("signature:   "+signjson.signature);
-	    res0.end(JSON.stringify(signjson));
+	    res.end(JSON.stringify(signjson));
 		   clearInterval(intervalId);
 		
 		}else{
@@ -38,11 +38,7 @@ console.log('jsapi_ticket:   '+jsapi_ticket);
 		}
 
 		}
-		console.log(999999999999999999999)
-req.on('error', function (e) {
-    console.log('problem with request: ' + e.message);
-});
-req.end();
-console.log(999999999999999999999)
+
+
 
 };
